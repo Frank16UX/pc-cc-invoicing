@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@frank16ux/pc-cookbook-legacy/dist/styles.css'
+// @ts-expect-error CSS import has no type declarations
+import '@frank16ux/pc-cookbook-legacy/styles'
 import './styles/global.scss'
 import App from './App'
 
