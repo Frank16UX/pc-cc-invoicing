@@ -45,8 +45,8 @@ const Proposal3 = forwardRef<{ insertTestData: () => void }>((_props, ref) => {
     )
   }
 
-  const stepDone = (step: number) =>
-    currentStep === 'paid' || (currentStep !== 'paid' && (currentStep as number) > step)
+  const stepDone = (step: number): boolean =>
+    currentStep === ('paid' as Step) || Number(currentStep) > step
 
   return (
     <div className="invoice-page">
